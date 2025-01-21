@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color: #323232;
+      }
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: bisque;
+        width: 300px;
+        margin: auto;
+        padding: 20px 10px;
+        margin-top: 100px;
+      }
+      #inputs {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+      #title {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      input {
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        width: fit-content;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="container" method="post" action="calculator.php">
+      <h1 id="title">Calculator</h1>
+      <div id="inputs">
+        <div>
+          <input
+            type="number"
+            name="num1"
+            placeholder="Enter the first number"
+            required
+          />
+          <input
+            type="number"
+            name="num2"
+            placeholder="Enter the second number"
+            required
+          />
+        </div>
+        <button name="add" aria-label="Add">Add</button>
+        <button name="sub" aria-label="Subtract">Subtract</button>
+        <button name="mul" aria-label="Multiply">Multiply</button>
+        <button name="div" aria-label="Divide">Divide</button>
+        <button name="mod" aria-label="Modulus">Modulus</button>
+      </div>
+    </form>
+  </body>
+</html>
