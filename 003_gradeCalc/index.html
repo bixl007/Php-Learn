@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="grade.php">
+      <div>Grade Calculator</div>
+      <div>
+        <label for="sub1">Marks</label>
+        <input type="number" name="marks" id="marks" />
+      </div>
+      <div>
+        <button>Calculate</button>
+      </div>
+    </form>
+  </body>
+</html>
