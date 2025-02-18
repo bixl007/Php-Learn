@@ -1,20 +1,29 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $marks = $_POST["marks"];
+    $sub1 = $_POST["sub1"];
+    $sub2 = $_POST["sub2"];
+    $sub3 = $_POST["sub3"];
+    $sub4 = $_POST["sub4"];
+    $sub5 = $_POST["sub5"];
+
+    $total = $sub1 + $sub2 + $sub3 + $sub4 + $sub5;
+    $percent = $total / 500 * 100;
     $grade = "";
-    if ($marks >= 90 && $marks <= 100) {
+    if ($percent >= 90 && $percent <= 100) {
         $grade = "A";
-    } elseif ($marks >= 80 && $marks < 90) {
+    } elseif ($percent >= 80 && $percent < 90) {
         $grade = "B";
-    } elseif ($marks >= 70 && $marks < 80) {
+    } elseif ($percent >= 70 && $percent < 80) {
         $grade = "C";
-    } elseif ($marks >= 60 && $marks < 70) {
+    } elseif ($percent >= 60 && $percent < 70) {
         $grade = "D";
-    } elseif ($marks >= 50 && $marks < 60) {
+    } elseif ($percent >= 50 && $percent < 60) {
         $grade = "E";
     } else {
         $grade = "F";
     }
+    echo "The total marks of the student is " . $total . "<br>";
+    echo "The percentage of the student is " . number_format($percent, 2) . "<br>";
     echo "The grade of the student is " . $grade;
 }
 ?>

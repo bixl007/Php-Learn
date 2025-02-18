@@ -3,39 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Document</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-      }
-      button {
-        cursor: pointer;
-      }
-    </style>
   </head>
-  <body>
-    <form method="post" action="grade.php">
-      <div>Grade Calculator</div>
-      <div>
-        <label for="sub1">Marks</label>
-        <input type="number" name="marks" id="marks" />
+  <body class="flex flex-col justify-center items-center gap-20 h-screen">
+    <form method="post" action="grade.php" class="flex flex-col gap-20">
+      <div class="text-3xl font-bold">Grade Calculator</div>
+      <div class="flex flex-col gap-5">
+        <label for="sub1" class="text-lg">Subject 1</label>
+        <input type="number" name="sub1" id="sub1" class="p-2 border border-gray-300 rounded-lg" />
+      </div>
+      <div class="flex flex-col gap-5">
+        <label for="sub2" class="text-lg">Subject 2</label>
+        <input type="number" name="sub2" id="sub2" class="p-2 border border-gray-300 rounded-lg" />
+      </div>
+      <div class="flex flex-col gap-5">
+        <label for="sub3" class="text-lg">Subject 3</label>
+        <input type="number" name="sub3" id="sub3" class="p-2 border border-gray-300 rounded-lg" />
+      </div>
+      <div class="flex flex-col gap-5">
+        <label for="sub4" class="text-lg">Subject 4</label>
+        <input type="number" name="sub4" id="sub4" class="p-2 border border-gray-300 rounded-lg" />
+      </div>
+      <div class="flex flex-col gap-5">
+        <label for="sub5" class="text-lg">Subject 5</label>
+        <input type="number" name="sub5" id="sub5" class="p-2 border border-gray-300 rounded-lg" />
       </div>
       <div>
-        <button>Calculate</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg cursor-pointer">Calculate</button>
       </div>
     </form>
   </body>
