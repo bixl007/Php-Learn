@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Insurance Eligibility Check</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex flex-col justify-center items-center h-screen gap-10 bg-gray-500 p-10 ">
+      <h2 class="text-3xl font-bold mb-4 text-black">Car Insurance Eligibility Check</h2>
+
+      <form method="post" action="script.php">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required /><br /><br />
+
+        <label for="license">Do you have a driving license? (Yes/No):</label>
+        <input type="text" name="license" id="license" required /><br /><br />
+
+        <label for="experience">Driving Experience (in years):</label>
+        <input type="number" name="experience" id="experience" /><br /><br />
+
+        <input type="submit" value="Check Eligibility" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded" />
+      </form>
+    </div>
+  </body>
+</html>
