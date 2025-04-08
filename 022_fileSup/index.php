@@ -69,7 +69,7 @@
             if (move_uploaded_file($filetmpname, "uploads/{$filename}")) {
                 echo "File uploaded";
             } else {
-                echo "Failed To upload"; 
+                echo "Failed To upload";
             }
         }
     }
